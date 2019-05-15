@@ -1,0 +1,49 @@
+To revert back changes to a file before commit is done:
+--------------------------------------------------------
+
+sample_code.py has been modified with one additional line in the end.
+But changes are not committed.
+
+Use: "git checkout -- <filename>" to delete the changes made to a file.
+     "git checkout -- ."          to delete changes made to all files.
+
+
+
+
+To revert back changes to a file after commit is done:
+--------------------------------------------------------
+
+There is a command "git log" to see track of all git changes which has been done.
+Lets say a file is changed and change is committed.
+Using "git log" we can get the commit ID for this change.
+When we want to revert a change we can run "git revert <commit ID>" to revert a particular
+commit.
+
+
+
+To go back to a different commit altogether:
+----------------------------------------------
+
+Use "git log" to see all commits to git. Choose a commit ID to where you want to go.
+
+
+Hard Reset:
+-----------
+"git reset --hard <commit id>" will take you there removing all the changes which was done
+after this commit ID.
+
+
+Mixed Reset:
+------------
+
+"git reset --mixed <commit id>" will take you there and the changes will be there but
+un-staged.
+
+
+Soft Reset:
+------------
+
+"git reset --soft <commit id>" will take you there and the changes will be there and
+staged.
+
+
